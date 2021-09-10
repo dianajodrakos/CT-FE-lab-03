@@ -3,15 +3,17 @@ import PropTypes from 'prop-types';
 
 const Article = ({ author, title, description, url, image }) => (
 
-  <a href={url} rel="noreferrer" target="_blank">
+  <div>
+    <a href={url} rel="noreferrer" target="_blank">
+      <h2>{title}</h2>
+    </a>
     <figure>
-      <img src={image} alt={title} />
+      <img src={image} alt={title} height="200px"/>
     </figure>
-    <h2>{title}</h2>
     <h3>{author}</h3>
     <p>{description}</p>
-  </a>
-  
+  </div>
+
 );
 
 Article.propTypes = {
