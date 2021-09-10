@@ -12,7 +12,11 @@ describe('ArticlesContainer', () => {
 
     screen.getByText('Reading Makes You Smarter');
 
-    const ul = await screen.findByRole('list', { name: 'articles' });
+    const ul = await screen.findByRole(
+      'list', 
+      { name: 'articles' }, 
+      { timeout: 2000 }
+    );
     expect(ul).not.toBeEmptyDOMElement();
 
     const input = await screen.findByLabelText('Search Articles:');
@@ -27,6 +31,6 @@ describe('ArticlesContainer', () => {
     return waitFor(() => {
       const articles = screen.findAllByText('Tesla', { exact: false });
       expect(articles).toMatchSnapshot();
-    });
+    }, { timeout: 2000 });
   });
 });
