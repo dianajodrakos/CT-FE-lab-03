@@ -15,7 +15,7 @@ describe('ArticlesContainer', () => {
     const ul = await screen.findByRole(
       'list', 
       { name: 'articles' }, 
-      { timeout: 2000 }
+      { timeout: 5000 }
     );
     expect(ul).not.toBeEmptyDOMElement();
 
@@ -31,6 +31,6 @@ describe('ArticlesContainer', () => {
     return waitFor(() => {
       const articles = screen.findAllByText('Tesla', { exact: false });
       expect(articles).toMatchSnapshot();
-    }, { timeout: 2000 });
+    }, { timeout: 5050 });
   });
 });
