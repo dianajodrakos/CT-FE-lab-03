@@ -3,7 +3,7 @@
 exports[`App component renders App 1`] = `
 <DocumentFragment>
   <h1>
-    Reading Makes you Smarter
+    Reading Makes You Smarter
   </h1>
   <p>
     Loading...

@@ -6,14 +6,15 @@ const ArticleList = ({ articles }) => (
 
   <ul aria-label="articles">
 
-    {articles.map(({ author, title, description, url, image }) => (
-      <li key={`${author}-${title}`}>
+    {articles.map(({ author, title, description, url, image, published }) => (
+      <li key={`${author}-${title}-${published}`}>
         <Article 
           author={author}
           title={title}
           description={description}
           url={url}
           image={image}
+          published={published}
         />
       </li>
     ))}
@@ -30,6 +31,7 @@ ArticleList.propTypes = {
       description: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
+      published: PropTypes.string.isRequired,
     })).isRequired
 };
 

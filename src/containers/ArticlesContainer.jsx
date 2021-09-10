@@ -4,7 +4,7 @@ import ArticleList from '../components/articles/ArticleList';
 import Controls from '../components/articles/Controls';
 import Header from '../components/header/Header';
 
-export default class NewsContainer extends Component {
+export default class ArticlesContainer extends Component {
   state = {
     loading: true,
     articles: [],
@@ -33,7 +33,6 @@ export default class NewsContainer extends Component {
   }
 
   render() {
-    console.log(this.state);
     const { articles, loading, query } = this.state;
     return (
       <>
