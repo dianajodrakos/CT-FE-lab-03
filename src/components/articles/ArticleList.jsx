@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import Article from './Article';
 
 const ArticleList = ({ articles }) => (
+
   <ul aria-label="articles">
+
     {articles.map(({ author, title, description, url, image }) => (
       <li key={`${author}-${title}`}>
         <Article 
@@ -14,9 +16,10 @@ const ArticleList = ({ articles }) => (
           image={image}
         />
       </li>
-
     ))}
+
   </ul>
+
 );
 
 ArticleList.propTypes = {
@@ -28,4 +31,6 @@ ArticleList.propTypes = {
       url: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
     })).isRequired
-}
+};
+
+export default ArticleList;

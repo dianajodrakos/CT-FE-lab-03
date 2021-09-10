@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import NewsContainer from './NewsContainer';
+import AriclesContainer from './ArticlesContainer';
 
-describe('NewsContainer', () => {
+describe('AriclesContainer', () => {
   it('should display a list of news articles', async () => {
-    render(<NewsContainer />);
+    render(<AriclesContainer />);
 
     screen.getByText('Loading...');
 

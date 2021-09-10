@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Article = ({ author, title, description, url, image }) => (
+
   <a href={url} rel="noreferrer" target="_blank">
     <figure>
       <img src={image} alt={title} />
@@ -10,6 +11,7 @@ const Article = ({ author, title, description, url, image }) => (
     <h3>{author}</h3>
     <p>{description}</p>
   </a>
+  
 );
 
 Article.propTypes = {
