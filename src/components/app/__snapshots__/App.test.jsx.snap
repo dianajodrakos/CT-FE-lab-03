@@ -3,7 +3,10 @@
 exports[`App component renders App 1`] = `
 <DocumentFragment>
   <h1>
-    Hello World
+    Reading Makes You Smarter
   </h1>
+  <p>
+    Loading...
+  </p>
 </DocumentFragment>
 `;
